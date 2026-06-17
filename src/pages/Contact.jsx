@@ -43,7 +43,7 @@ function Contact() {
 
   return (
     <div className="p-6 flex items-center flex-col gap-4">
-      <button className="bg-slate-900 hover:bg-slate-800 text-white font-medium text-md px-5 py-3 rounded-xl active:scale-95 transition-all duration-150 shadow-md shadow-slate-900/10" onClick={showcard}>
+      <button className="bg-slate-900 hover:bg-slate-800 text-white font-medium text-md px-5 py-3 rounded-xl active:scale-95 transition-all duration-150 shadow-md shadow-slate-900/10 cursor-pointer" onClick={showcard}>
         To Do List
       </button>
       <div className={`${card ? 'block' : 'hidden'} container mx-auto w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl`}>
