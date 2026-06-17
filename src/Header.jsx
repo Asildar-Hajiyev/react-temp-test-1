@@ -57,6 +57,8 @@ function Header() {
           <li><Link to="/about" className="hover:text-blue-700 rounded">About</Link></li>
           <li><Link to="/contact" className="hover:text-blue-700 rounded">Contact</Link></li>
           <li><Link to="/todo" className="hover:text-blue-700 rounded">To Do</Link></li>
+          <li><Link to="/products" className="hover:text-blue-700 rounded">Products</Link></li>
+          <li><Link to="/user" className="hover:text-blue-700 rounded">User</Link></li>
         </ul>
       </div>
 
