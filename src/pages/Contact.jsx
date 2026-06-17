@@ -6,6 +6,7 @@ function Contact() {
   const [text, setText] = useState('');
   const [edit, setEdit] = useState(null); // Hansı ID-li elementin redaktə olunduğunu saxlayır
   const [arr, setArr] = useState([]);
+  const [card,setCard] = useState(false)
 
   function add() {
     if (!text.trim()) return; 
@@ -36,10 +37,16 @@ function Contact() {
     }
     setArr(arr.filter(item => item.id !== id));
   }
+  function showcard(){
+    setCard(!card)
+  }
 
   return (
-    <div className="p-6">
-      <div className="container mx-auto w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+    <div className="p-6 flex items-center flex-col gap-4">
+      <button className="bg-slate-900 hover:bg-slate-800 text-white font-medium text-md px-5 py-3 rounded-xl active:scale-95 transition-all duration-150 shadow-md shadow-slate-900/10" onClick={showcard}>
+        To Do List
+      </button>
+      <div className={`${card ? 'block' : 'hidden'} container mx-auto w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl`}>
         
         {/* Header/Başlıq */}
         <div className="bg-slate-900 px-6 py-5 text-center">
